@@ -1,80 +1,292 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Build-A-Sport Quiz</title>
-        <div class="header">
-    <h1><a class="home" href="index.html">Build-A-Sport</a></h1>
-  <p><a class="quiz" href="quiz.html">Quiz</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a class="sport-design" href="tree.html">Design your Sport</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a class="gallery" href="gallery.html">New Sports Gallery</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a class="more-info"href="info.html">More Information</a></p>
-</div>
-        <style>
-            .header {
-  padding: 2px;
-  text-align: center;
-  background: rgb(25, 61, 204);
-  color: white;
-  font-size: 14px;
-}
-            .quiz {
-                color: black;
-                text-decoration: underline;
-            }
-            .more-info {
-                color: rgb(171, 171, 171);
-            }
-            .gallery {
-                color: rgb(171, 171, 171);
-            }
-            A {
-                text-decoration: none;
-            }
-            .sport-design {
-                color: rgb(171, 171, 171);
-            }
-            .body {
-                text-align: center;
-                font-size: 20px;
-            }
-            .home {
-                color:white;
-            }
-        </style>
-    </head>
-    <body class="body">
-        <br>
-        <p>
-            <h1>Step 0: Get Ideas (optional, if you need ideas)</h1>
-            <h3>Part 1- "What sport is for you?" quiz</h3><br>
-            <strong>1: What do you do when a ball comes flying at you?</strong><br>
-            <input type="radio" name="q1" id="a" value="1"> a) Try and catch then throw it back<br>
-            <input type="radio" name="q1" id="b" value="1"> b) Let it hit the ground then kick it <br>
-            <input type="radio" name="q1" id="c" value="1"> c) Run away <br>
-            <input type="radio" name="q1" id="d" value="1"> d) Duck and scream/other <br><br>
-            <strong>2: What do you do when you are angry?</strong><br>
-            <input type="radio" name="q2" id="a" value="1"> a) Throw something<br>
-            <input type="radio" name="q2" id="b" value="1"> b) Kick something<br>
-            <input type="radio" name="q2" id="c" value="1"> c) Run around to get your energy out<br>
-            <input type="radio" name="q2" id="d" value="1"> d) Other things<br><br>
-            <strong>3: What is your favorite food?</strong><br>
-            <input type="radio" name="q3" id="a" value="1"> a) Fruit<br>
-            <input type="radio" name="q3" id="b" value="1"> b) Fish<br>
-            <input type="radio" name="q3" id="c" value="1"> c) Pasta<br>
-            <input type="radio" name="q3" id="d" value="1"> d) Other<br><br>
-            <strong>4: What do you do when you want to throw something away?</strong><br>
-            <input type="radio" name="q4" id="a" value="1"> a) Shoot it like a basketball<br>
-            <input type="radio" name="q4" id="b" value="1"> b) Drop kick it in<br>
-            <input type="radio" name="q4" id="c" value="1"> c) Run over to the trash can<br>
-            <input type="radio" name="q4" id="d" value="1"> d) Other<br><br>
-            <strong>5: How do you ask someone a question?</strong><br>
-            <input type="radio" name="q5" id="a" value="1"> a) Throw them a paper airplane<br>
-            <input type="radio" name="q5" id="b" value="1"> b) Tap them with your foot <br>
-            <input type="radio" name="q5" id="c" value="1"> c) Run toward them and ask<br>
-            <input type="radio" name="q5" id="d" value="1"> d) Other<br><br><br>
-            <h3>Yay! You finished!</h3><br>Look back over your answers. If you chose mostly...<br><strong>a's,</strong> you like throwing sports<br><strong>b's,</strong> you like kicking sports<br><strong>c's,</strong> you like running sports<br><strong>d's,</strong> you like other sports
-            <br><button class="start-designing!-button"><a href="gallery.html"><h3>Next -></h3></a></button>
-        </p>
-    </body>
+<head>
+	<meta charset="utf-8">
+	<title>Build-A-Sport Quiz</title>
+	<div class="header">
+		<h1><a class="home" href="index.html">Build-A-Sport</a></h1>
+		<p>
+			<a class="quiz" href="quiz.html">Quiz</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a class="sport-design" href="tree.html">Design your Sport</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a class="gallery" href="gallery.html">New Sports Gallery</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a class="more-info" href="info.html">More Information</a>
+		</p>
+	</div>
+	<style>
+		.header {
+			padding: 2px;
+			text-align: center;
+			background: rgb(25, 61, 204);
+			color: white;
+			font-size: 14px;
+		}
+
+		.quiz {
+			color: black;
+			text-decoration: underline;
+		}
+
+		.more-info {
+			color: rgb(171, 171, 171);
+		}
+
+		.gallery {
+			color: rgb(171, 171, 171);
+		}
+
+		A {
+			text-decoration: none;
+		}
+
+		.sport-design {
+			color: rgb(171, 171, 171);
+		}
+
+		.body {
+			text-align: center;
+			font-size: 20px;
+		}
+
+		.home {
+			color: white;
+		}
+	</style>
+</head>
+<body class="body">
+	<br>
+	<p>
+		<h1>Step 0: Get Ideas (optional, if you need ideas)</h1>
+		<h3>Part 1- "What sport is for you?" quiz</h3><br>
+
+		<div id="q1div">
+			<label for="">
+				<strong>1: What do you do when a ball comes flying at you?</strong><br>
+			</label>
+			<input type="radio" name="q1" id="q1_option_1" value="1"> a) Try and catch then throw it back<br>
+			<input type="radio" name="q1" id="q1_option_1" value="2"> b) Let it hit the ground then kick it <br>
+			<input type="radio" name="q1" id="q1_option_1" value="3"> c) Run away <br>
+			<input type="radio" name="q1" id="q1_option_1" value="4"> d) Duck and scream/other <br><br>
+		</div>
+
+		<div id="q2div">
+			<label for="">
+				<strong>2: What do you do when you are angry?</strong><br>
+			</label>
+			<input type="radio" name="q2" id="a" value="1"> a) Throw something<br>
+			<input type="radio" name="q2" id="b" value="2"> b) Kick something<br>
+			<input type="radio" name="q2" id="c" value="3"> c) Run around to get your energy out<br>
+			<input type="radio" name="q2" id="d" value="4"> d) Other things<br><br>
+		</div>
+
+
+
+		<div id="q3div">
+			<label for="">
+
+				<strong>3: What is your favorite food?</strong><br>
+			</label>
+			<input type="radio" name="q3" id="a" value="1"> a) Fruit<br>
+			<input type="radio" name="q3" id="b" value="2"> b) Fish<br>
+			<input type="radio" name="q3" id="c" value="3"> c) Pasta<br>
+			<input type="radio" name="q3" id="d" value="4"> d) Other<br><br>
+		</div>
+
+		<div id="q4div">
+			<label for="">
+
+				<strong>4: What do you do when you want to throw something away?</strong><br>
+			</label>
+			<input type="radio" name="q4" id="a" value="1"> a) Shoot it like a basketball<br>
+			<input type="radio" name="q4" id="b" value="2"> b) Drop kick it in<br>
+			<input type="radio" name="q4" id="c" value="3"> c) Run over to the trash can<br>
+			<input type="radio" name="q4" id="d" value="4"> d) Other<br><br>
+		</div>
+
+		<div id="q5div">
+			<label for="">
+
+				<strong>5: How do you ask someone a question?</strong><br>
+			</label>
+			<input type="radio" name="q5" id="a" value="1"> a) Throw them a paper airplane<br>
+			<input type="radio" name="q5" id="b" value="2"> b) Tap them with your foot <br>
+			<input type="radio" name="q5" id="c" value="3"> c) Run toward them and ask<br>
+			<input type="radio" name="q5" id="d" value="4"> d) Other<br><br><br>
+		</div>
+
+
+
+		<h3>Yay! You finished! Press Submit to get your results.</h3>
+        <br><button type="button" onclick="calculate();">Submit</button><br>
+		<br><button class="start-designing!-button"><a href="gallery.html"><h3>Next -></h3></a></button>
+		
+	</p>
+</body>
+<script>
+	function calculate() {
+		var option1 = 0, option2 = 0, option3 = 0, option4 = 0;
+		var ele = document.getElementsByName('q1');
+
+		for (i = 0; i < ele.length; i++) {
+			if (ele[i].checked) {
+				if (ele[i].value == 1) {
+					option1++;
+				}
+				if (ele[i].value == 2) {
+					option2++;
+				}
+				if (ele[i].value == 3) {
+					option3++;
+				}
+				if (ele[i].value == 4) {
+					option4++;
+				}
+			}
+
+
+		}
+		//var a = option1 + "," + option2 + "," + option3 + "," + option4;
+	/// alert(a);
+
+
+
+
+		var ele = document.getElementsByName('q2');
+
+		for (i = 0; i < ele.length; i++) {
+			if (ele[i].checked) {
+				if (ele[i].value == 1) {
+					option1++;
+				}
+				if (ele[i].value == 2) {
+					option2++;
+				}
+				if (ele[i].value == 3) {
+					option3++;
+				}
+				if (ele[i].value == 4) {
+					option4++;
+				}
+			}
+
+
+
+		}
+		//var a = option1 + "," + option2 + "," + option3 + "," + option4;
+		// alert(a);
+
+		var ele = document.getElementsByName('q3');
+
+		for (i = 0; i < ele.length; i++) {
+			if (ele[i].checked) {
+				if (ele[i].value == 1) {
+					option1++;
+				}
+				if (ele[i].value == 2) {
+					option2++;
+				}
+				if (ele[i].value == 3) {
+					option3++;
+				}
+				if (ele[i].value == 4) {
+					option4++;
+				}
+			}
+
+
+
+		}
+		//var a = option1 + "," + option2 + "," + option3 + "," + option4;
+		// alert(a);
+		var ele = document.getElementsByName('q4');
+
+		for (i = 0; i < ele.length; i++) {
+			if (ele[i].checked) {
+				if (ele[i].value == 1) {
+					option1++;
+				}
+				if (ele[i].value == 2) {
+					option2++;
+				}
+				if (ele[i].value == 3) {
+					option3++;
+				}
+				if (ele[i].value == 4) {
+					option4++;
+				}
+			}
+
+
+
+		}
+		//var a = option1 + "," + option2 + "," + option3 + "," + option4;
+		//alert(a);
+		var ele = document.getElementsByName('q5');
+
+		for (i = 0; i < ele.length; i++) {
+			if (ele[i].checked) {
+				if (ele[i].value == 1) {
+					option1++;
+				}
+				if (ele[i].value == 2) {
+					option2++;
+				}
+				if (ele[i].value == 3) {
+					option3++;
+				}
+				if (ele[i].value == 4) {
+					option4++;
+				}
+			}
+
+
+
+		}
+		//var a = option1 + "," + option2 + "," + option3 + "," + option4;
+		// alert(a);
+
+		//Math.max(1, 3, 2)
+		var highest;
+		if (option1 > option2) {
+			highest = "o1";
+
+			if (option3 > option1) {
+				highest = "o3";
+			}
+			if (option4 > option1) {
+				highest = "o4";
+			}
+		}
+		else {
+			highest = "o2"
+
+
+			if (option3 > option2) {
+				highest = "o3";
+			}
+			if (option4 > option2) {
+				highest = "o4";
+			}
+		}
+
+		if (highest == "o1") {
+
+			alert("We think you will enjoy throwing sports: check out some examples on the next page");
+		}
+		else if (highest == "o2") {
+
+			alert("We think you will enjoy kicking sports: check out some examples on the next page");
+
+		}
+		else if (highest == "o3") {
+
+			alert("We think you will enjoy running sports: check out some examples on the next page");
+		}
+		else {
+			alert("We think you will enjoy other sports: check out some examples on the next page");
+
+		}
+
+	}
+
+</script>
 </html>
