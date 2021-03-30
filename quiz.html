@@ -51,6 +51,7 @@
 		.home {
 			color: white;
 		}
+
 	</style>
 </head>
 <body class="body">
@@ -116,8 +117,8 @@
 
 
 
-		<h3>Yay! You finished! Press "Submit" to get your results.</h3>
-        <br><button type="button" onclick="calculate();">Submit</button><br>
+		<h3>Yay! You finished! Press <button type="button" onclick="calculate()">Submit</button> to get your results.</h3>
+        <div id="messsageDiv"></div>
 		<br><button class="start-designing!-button"><a href="gallery.html"><h3>Next -></h3></a></button>
 		
 	</p>
@@ -271,6 +272,8 @@
 
 		if (highest == "o1") {
 
+            //var messageDiv = document.getElementById("messageDiv");
+            //messageDiv.innerHTML = 'We think you will enjoy throwing sports: check out some examples on the next page!'
 			alert("We think you will enjoy throwing sports: check out some examples on the next page");
 		}
 		else if (highest == "o2") {

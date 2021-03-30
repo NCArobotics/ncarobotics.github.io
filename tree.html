@@ -54,7 +54,7 @@
         <h3>Part 1- Game Structure (type or write your answers on a separate page)<br><br>
 
             <div id="q1">
-            Will your sport involve balls?<br>
+            Will your sport involve ball(s)?<br>
             <button onclick="yes1()">yes</button>&emsp;<button onclick="no1()">no</button><br><br></div>
 
             <div id="q2" class="hide">
@@ -89,7 +89,12 @@
             Will there be teams?<br>
             <button onclick="yes9()">yes</button>&emsp;<button onclick="no9()">no</button><br><br></div>
 
-            <div id="next" class="hide">Click Next Below<br><br></div>
+            <div id="summary" class="hide"><h2>Your Game will...</h2>
+            <li>be made by YOU!</li>
+            </div>
+            <br><br>
+
+            <div id="next" class="hide"><div id="bye"><button onclick="sum()">See Summary</button> then</div> Click Next Below<br><br></div>
 
         <button><a href="gallery.html"><h3><- Back</h3></a></button>&emsp;<button><a href="equipment.html"><h3>Next -></h3></a></button>
         <script>
@@ -105,48 +110,64 @@
                 x.style.display = "none";
                 var y = document.getElementById("q8");
                 y.style.display = "block"
+                var summary = document.getElementById("summary");
+                summary.innerHTML += '<li>have multiple balls</li>'
                 }
             function yes3() {
                 var x = document.getElementById("q3");
                 x.style.display = "none";
                 var y = document.getElementById("next");
                 y.style.display = "block"
+                var summary = document.getElementById("summary");
+                summary.innerHTML += '<li>be a one-person game</li>'
                 }
             function yes4() {
                 var x = document.getElementById("q4");
                 x.style.display = "none";
                 var y = document.getElementById("q6");
                 y.style.display = "block"
+                var summary = document.getElementById("summary");
+                summary.innerHTML += '<li>have multiple people divided into teams</li>'
                 }
             function yes5() {
                 var x = document.getElementById("q5");
                 x.style.display = "none";
                 var y = document.getElementById("q9");
                 y.style.display = "block"
+                var summary = document.getElementById("summary");
+                summary.innerHTML += '<li>have multiple balls that will be thrown</li>'
                 }
             function yes6() {
                 var x = document.getElementById("q6");
                 x.style.display = "none";
                 var y = document.getElementById("next");
                 y.style.display = "block"
+                var summary = document.getElementById("summary");
+                summary.innerHTML += '<li>have players who run</li>'
                 }
             function yes7() {
                 var x = document.getElementById("q7");
                 x.style.display = "none";
                 var y = document.getElementById("next");
                 y.style.display = "block"
+                var summary = document.getElementById("summary");
+                summary.innerHTML += '<li>be every person for themselves</li>'
                 }
             function yes8() {
                 var x = document.getElementById("q8");
                 x.style.display = "none";
                 var y = document.getElementById("next");
                 y.style.display = "block"
+                var summary = document.getElementById("summary");
+                summary.innerHTML += '<li>be for one person</li>'
                 }
             function yes9() {
                 var x = document.getElementById("q9");
                 x.style.display = "none";
                 var y = document.getElementById("next");
                 y.style.display = "block"
+                var summary = document.getElementById("summary");
+                summary.innerHTML += '<li>have multiple people divided into teams</li>'
                 }
             //nos
             function no1() {
@@ -154,12 +175,16 @@
                 x.style.display = "none";
                 var y = document.getElementById("q3");
                 y.style.display = "block"
+                var summary = document.getElementById("summary");
+                summary.innerHTML += '<li>have no balls</li>'
                 }
             function no2() {
                 var x = document.getElementById("q2");
                 x.style.display = "none";
                 var y = document.getElementById("q3");
                 y.style.display = "block"
+                var summary = document.getElementById("summary");
+                summary.innerHTML += '<li>have one ball</li>'
                 }
             function no3() {
                 var x = document.getElementById("q3");
@@ -178,18 +203,24 @@
                 x.style.display = "none";
                 var y = document.getElementById("q4");
                 y.style.display = "block"
+                var summary = document.getElementById("summary");
+                summary.innerHTML += '<li>have multiple balls that will not be thrown</li>'
                 }
             function no6() {
                 var x = document.getElementById("q6");
                 x.style.display = "none";
                 var y = document.getElementById("next");
                 y.style.display = "block"
+                var summary = document.getElementById("summary");
+                summary.innerHTML += '<li>have players who do not run</li>'
                 }
             function no7() {
                 var x = document.getElementById("q7");
                 x.style.display = "none";
                 var y = document.getElementById("next");
                 y.style.display = "block"
+                var summary = document.getElementById("summary");
+                summary.innerHTML += '<li>have multiple people all working together</li>'
                 }
             function no8() {
                 var x = document.getElementById("q8");
@@ -202,7 +233,14 @@
                 x.style.display = "none";
                 var y = document.getElementById("next");
                 y.style.display = "block"
+                var summary = document.getElementById("summary");
                 }
+            function sum() {
+                var x = document.getElementById("summary")
+                x.style.display = "block"
+                var y = document.getElementById("bye")
+                y.style.display = "none"
+            }
             </script>
     </body>
 </html>
