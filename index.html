@@ -44,7 +44,7 @@
             }
             .body {
                 text-align: center;
-                font-size: 16px;
+                font-size: 18px;
             }
             * {box-sizing: border-box;}
             body {font-family: Garamond, serif;}
@@ -58,11 +58,11 @@
             }
 
             .text {
-                color: #f2f2f2;
+                color: black;
                 font-size: 15px;
                 padding: 8px 12px;
                 position: absolute;
-                bottom: 8px;
+                bottom: -5px;
                 width: 100%;
                 text-align: center;
             }
@@ -92,12 +92,16 @@
             }
 
             @media only screen and (max-width: 300px) {
-                .text {font-size: 11px}
-                .text2 {font-size: 11px;
+                .text {font-size: 11px;
                         color: black}
             }
             img.curve {
                 border-radius: 100px;
+            }
+            
+            .main {
+                max-width: 1000px;
+                margin: auto;
             }
         </style>
     </head>
@@ -105,32 +109,32 @@
         <div class="slideshow-container">
 
             <div class="mySlides fade">
-              <img class="curve" src="Gallery/bas_logo.png" width="470px">
+              <img class="curve" src="Gallery/bas_logo.png" width="590px">
             </div>
             
             <div class="mySlides fade">
-              <img class="curve" src="Gallery/Capture_the_pins_1.jpg" width="600px">
-              <div class="text2">Capture the Pins</div>
+              <img class="curve" src="Gallery/wide_pins.jpg" style="width: 100%">
+              <div class="text">Capture the Pins</div>
             </div>
             
             <div class="mySlides fade">
-              <img class="curve" src="Gallery/20210306_141538.jpg" width="600px">
-              <div class="text2">Docrosse</div>
+              <img class="curve" src="Gallery/wide_snow.jpg" style="width: 100%">
+              <div class="text">Docrosse</div>
             </div>
             
             <div class="mySlides fade">
-              <img class="curve" src="Gallery/IMG_4460.jpg" width="625px">
+              <img class="curve" src="Gallery/wide_children.jpg" style="width: 100%">
               <div class="text">Children Following our Website</div>
             </div>
             
             <div class="mySlides fade">
-              <img class="curve" src="Gallery/IMG_7948.jpeg" width="625px">
+              <img class="curve" src="Gallery/wide_hahn.jpeg" style="width: 100%">
               <div class="text">Hahn Ball</div>
             </div>
             
             <div class="mySlides fade">
-              <img class="curve" src="https://openclipart.org/image/800px/281150" width="425px">
-              <div class="text2">Get Fit, Be Creative, and Have Fun!</div>
+              <img class="curve" src="https://openclipart.org/image/800px/281150" width="550px">
+              <div class="text">Get Fit, Be Creative, and Have Fun!</div>
             </div>
             <br>
             </div>
@@ -142,7 +146,7 @@
             <span class="dot"></span> 
             <span class="dot"></span> 
           </div>
-        <p>Get ready to design your own sport in only <em>3 steps!</em> <br>
+        <p class="words">Get ready to design your own sport in only <em>3 steps!</em> <br>
             <strong><br>Step 0:</strong> (optional) Take the "What sport is for you?" quiz, if you don't have any ideas.<br>
             <br><strong>Step 1:</strong> Start designing.<br>
             <br><strong>Step 2:</strong> Create and print your directions.<br>
@@ -150,7 +154,7 @@
             <br>You are in charge. Have<strong> FUN!</strong><br>
             <br>Ready,
             <br>Set,
-            <br><button class= "go-button"><a href="quiz.html">GO, Get Ideas!</a></button>&emsp;&emsp;<button class= "go-button"><a href="tree.html">GO, Start Designing!</a></button></p>
+            <br><br>&emsp;&emsp;&emsp;&nbsp;<button class= "go-button"><a href="quiz.html">GO, Get Ideas!</a></button>&emsp;&emsp;<button class= "go-button"><a href="tree.html">GO, Start Designing!</a></button></p>
             <script>
                 var slideIndex = 0;
                 showSlides();

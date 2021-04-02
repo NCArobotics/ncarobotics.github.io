@@ -25,6 +25,7 @@
             .body {
                 font-size: 20px;
                 text-align: center;
+                padding: 20px;
             }
             .go-button {
                 font-size: 40px;
@@ -55,13 +56,172 @@
             img.curve {
                 border-radius: 30px;
             }
+            * {
+                box-sizing: border-box;
+            }
+            .main {
+                max-width: 1000px;
+                margin: auto;
+            }
+            h1 {
+                word-break: break-all;
+            }
+            .row {
+                margin: 10px -16px;
+            }
+            .row,
+            .row > .column {
+                padding: 8px;
+            }
+            .column {
+                float: left;
+                width: 25%;
+                display: none;
+            }
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+            .content {
+                background-color: rgb(171, 171, 171);
+                padding: 10px;
+            }
+            .show {
+                display: block;
+            }
+            .btn {
+                border: none;
+                outline: none;
+                padding: 12px 16px;
+                background-color: white;
+                cursor: pointer;
+            }
+            .btn:hover {
+                background-color: #ddd;
+            }
+            .btn.active {
+                background-color: #666;
+                color: white;
+            }
         </style>
     </head>
     <body class="body">
         <h1>Step 0: Get Ideas (optional if you need ideas)</h1>
-            <h3>Part 2- New Sports Gallery (Table of Contents)</h3>
-        <a href="throwing.html">Throwing Sports</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="kicking.html">Kicking Sports</a><br><br>
-        <a  href="running.html">Running Sports</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="other.html"> Other Sports</a><br><br>
-        <img src="Gallery/jedsport2.jpg" class="curve" width="400px">
+            <h3>Part 2- New Sports Gallery</h3>
+            <div id="myBtnContainer">
+                <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+                <button class="btn" onclick="filterSelection('throwing')"> Throwing</button>
+                <button class="btn" onclick="filterSelection('kicking')"> Kicking</button>
+                <button class="btn" onclick="filterSelection('running')"> Running</button>
+                <button class="btn" onclick="filterSelection('other')"> Other</button>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="column throwing running">
+                  <div class="content">
+                    <img src="Gallery/Capture_the_pins_1.jpg" alt="Capture the Pins" style="width:100%">
+                    <h4>Capture the Pins</h4>
+                    <p>Knock down pins with dodgeballs and retrieve them without being hit...</p>
+                  </div>
+                </div>
+                <div class="column running other">
+                  <div class="content">
+                  <img src="Gallery/20210306_141538.jpg" alt="DoCrosse" style="width:100%">
+                    <h4>DoCrosse</h4>
+                    <p>Hurl a toy with a lacrosse stick at a goal for your dog to retrieve...</p>
+                  </div>
+                </div>
+                <div class="column other">
+                  <div class="content">
+                  <img src="Gallery/20210313_152731.jpg" alt="Ping-Pong Spider Web" style="width:100%">
+                    <h4>Ping-Pong Spider Web</h4>
+                    <p>Bounce a ping pong ball to your team while balancing on a web...</p>
+                  </div>
+                </div>
+                
+                <div class="column kicking running throwing">
+                  <div class="content">
+                    <img src="Gallery/20210320_150436.jpg" alt="Kickball 2.0" style="width:100%">
+                    <h4>Kickball 2.0</h4>
+                    <p>Kick the dodgeball then run around the bases trying to not be hit...</p>
+                  </div>
+                </div>
+                <div class="column running throwing">
+                  <div class="content">
+                  <img src="Gallery/20210325_172415_HDR.jpg" alt="Make it Home" style="width:100%">
+                    <h4>Make it Home</h4>
+                    <p>Bat, throw, and/or run the ball to your catcher at home...</p>
+                  </div>
+                </div>
+                <div class="column other">
+                    <div class="content">
+                    <img src="Gallery/IMG_7948.jpeg" alt="Hahn Ball" style="width:100%">
+                      <h4>Hahn Ball</h4>
+                      <p>Hit the ball off the trampoline and don't let it hit the ground...</p>
+                    </div>
+                  </div>
+                <div class="column running">
+                    <div class="content">
+                    <img src="Gallery/20210330_171717.jpg" alt="Poison Frog" style="width:100%">
+                      <h4>Poison Frog</h4>
+                      <p>Monkeys eat all the frogs but don't get poisoned...</p>
+                    </div>
+                  </div>
+                <div class="column kicking running throwing other">
+                    <div class="content">
+                    <img src="Gallery/bas_logo.png" alt="No More!" style="width:68%">
+                      <h4>No More!</h4>
+                      <p>Want to see your game on here? Submit it to ncaroboknights@gmail.com...</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
         <br><button><a href="quiz.html"><h3><- Back</h3></a></button>&emsp;<button><a href="tree.html"><h3>Next -></h3></a></button>
-    </body>
+        <script>
+filterSelection("all")
+function filterSelection(c) {
+var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+</body>
+</html>
