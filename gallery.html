@@ -4,7 +4,7 @@
         <meta charset="utf-8" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/png" href="Gallery/minilogo2.png"/><title>Build-A-Sport Homepage</title>
         <div class="header">
-            <h1><a class="home" href="index.html"><img src="Gallery/minilogo2.png" width="50px" class="logo">&emsp;Build-A-Sport</a></h1>
+            <h1><a class="home" href="index.html"><img src="Gallery/minilogo2.png" alt="mini logo" width="50px" class="logo">&emsp;Build-A-Sport</a></h1>
     <p><a class="quiz" href="quiz.html">Quiz</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <a class="sport-design" href="tree.html">Design your Sport</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <a class="gallery" href="gallery.html">New Sports Gallery</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -104,6 +104,45 @@
                 background-color: #666;
                 color: white;
             }
+            .column:hover {
+                color: rgb(25, 61, 204);
+                cursor: pointer;
+            }
+            /* The Modal (background) */
+            .modal {
+                display: none; /* Hidden by default */
+                position: fixed; /* Stay in place */
+                z-index: 1; /* Sit on top */
+                padding-top: 100px; /* Location of the box */
+                left: 0;
+                top: 0;
+                width: 100%; /* Full width */
+                height: 100%; /* Full height */
+                overflow: auto; /* Enable scroll if needed */
+                background-color: rgb(0,0,0); /* Fallback color */
+                background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            }
+            /* Modal Content */
+            .modal-content {
+                background-color: #fefefe;
+                margin: auto;
+                padding: 20px;
+                border: 1px solid #888;
+                width: 80%;
+            }
+            /* The Close Button */
+            .close {
+                color: #aaaaaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+            .close:hover,
+            .close:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
         </style>
     </head>
     <body class="body">
@@ -118,21 +157,8 @@
               </div>
               <hr>
               <div class="row">
-                <div class="column throwing running">
-                  <div class="content">
-                    <img src="Gallery/Capture_the_pins_1.jpg" alt="Capture the Pins" style="width:100%">
-                    <h4>Capture the Pins</h4>
-                    <p>Knock down pins with dodgeballs and retrieve them without being hit...</p>
-                  </div>
-                </div>
-                <div class="column running other">
-                  <div class="content">
-                  <img src="Gallery/20210306_141538.jpg" alt="DoCrosse" style="width:100%">
-                    <h4>DoCrosse</h4>
-                    <p>Hurl a toy with a lacrosse stick at a goal for your dog to retrieve...</p>
-                  </div>
-                </div>
-                <div class="column other">
+                
+                <div class="column other" id="3">
                   <div class="content">
                   <img src="Gallery/20210313_152731.jpg" alt="Ping-Pong Spider Web" style="width:100%">
                     <h4>Ping-Pong Spider Web</h4>
@@ -140,35 +166,63 @@
                   </div>
                 </div>
                 
-                <div class="column kicking running throwing">
+                <div class="column kicking running throwing" id="4">
                   <div class="content">
                     <img src="Gallery/20210320_150436.jpg" alt="Kickball 2.0" style="width:100%">
                     <h4>Kickball 2.0</h4>
                     <p>Kick the dodgeball then run around the bases trying to not be hit...</p>
                   </div>
                 </div>
-                <div class="column running throwing">
-                  <div class="content">
-                  <img src="Gallery/20210325_172415_HDR.jpg" alt="Make it Home" style="width:100%">
-                    <h4>Make it Home</h4>
-                    <p>Bat, throw, and/or run the ball to your catcher at home...</p>
-                  </div>
-                </div>
-                <div class="column other">
+                <div class="column other" id="7">
                     <div class="content">
                     <img src="Gallery/IMG_7948.jpeg" alt="Hahn Ball" style="width:100%">
-                      <h4>Hahn Ball</h4>
+                      <h4>Hahn-Ball</h4>
                       <p>Hit the ball off the trampoline and don't let it hit the ground...</p>
                     </div>
                   </div>
-                <div class="column running">
+                <div class="column other" id="8">
+                    <div class="content">
+                    <img src="Gallery/HPPB.jpg" alt="Hockey Ping-Pong Baseball" style="width:100%">
+                      <h4>Hockey Ping-Pong Baseball</h4>
+                      <p>Pass around the ball without it getting smacked...</p>
+                    </div>
+                  </div>
+                <div class="column running" id="9">
                     <div class="content">
                     <img src="Gallery/20210330_171717.jpg" alt="Poison Frog" style="width:100%">
                       <h4>Poison Frog</h4>
-                      <p>Monkeys eat all the frogs but don't get poisoned...</p>
+                      <p>Monkeys, eat all the frogs but don't get poisoned...</p>
                     </div>
                   </div>
-                <div class="column kicking running throwing other">
+                  <div class="column throwing running">
+                    <div class="content" id="1">
+                      <img src="Gallery/Capture_the_pins_1.jpg" alt="Capture the Pins" style="width:100%">
+                      <h4>Capture the Pins</h4>
+                      <p>Knock down pins with dodgeballs and retrieve them without being hit...</p>
+                    </div>
+                  </div>
+                  <div class="column running other" id="2">
+                    <div class="content">
+                    <img src="Gallery/20210306_141538.jpg" alt="DoCrosse" style="width:100%">
+                      <h4>DoCrosse</h4>
+                      <p>Hurl a toy with a lacrosse stick at a goal for your dog to retrieve...</p>
+                    </div>
+                  </div>
+                  <div class="column running throwing" id="5">
+                    <div class="content">
+                    <img src="Gallery/20210325_172415_HDR.jpg" alt="Make it Home" style="width:100%">
+                      <h4>Make it Home</h4>
+                      <p>Bat, throw, and/or run the ball to your catcher at home...</p>
+                    </div>
+                  </div>
+                  <div class="column running throwing" id="6">
+                    <div class="content">
+                  <img src="Gallery/20210330_171515.jpg" alt="Monster Truck Ball" style="width:100%">
+                      <h4>Monster Truck Ball</h4>
+                      <p>Throw the ball in the hoop without getting hit by a soccerball...</p>
+                    </div>
+                  </div>
+                <div class="column kicking running throwing other" id="end">
                     <div class="content">
                     <img src="Gallery/bas_logo.png" alt="No More!" style="width:68%">
                       <h4>No More!</h4>
@@ -177,6 +231,226 @@
                   </div>
                 </div>
               </div>
+              </div>
+              <div id="direct1" class="modal">
+
+                <div class="modal-content">
+                  <span class="close 1">&times;</span>
+                  <p>Directions are coming soon</p>
+                </div>
+              
+              </div>
+              <div id="direct2" class="modal">
+
+                <div class="modal-content">
+                  <span class="close 2">&times;</span>
+                  <p>Directions are coming soon</p>
+                </div>
+              
+              </div>
+              <div id="direct3" class="modal">
+
+                <div class="modal-content">
+                  <span class="close 3">&times;</span>
+                  <p>
+                    <h1>Ping-pong Spider web</h1>
+                    <h3>Equipment Needed:</h3>
+                        <li>Ping-pong Paddles</li>
+                        <li>Ping-pong ball</li>
+                        <li>Horizantal spider web</li>
+                        <br>
+                        <h3>Object:</h3>
+                        <p>Make the other team lose all their 5 points.</p>
+                        <br>
+                    <h3>Instructions:</h3>
+                      <br>
+                        <li>Find a horizantal spider web.</li>
+                        <li>Divide players into two teams.</li>
+                        <li>Hand out paddles.</li>
+                        <li>Each team starts with 5 points.</li>
+                        <li>One person starts with a ping-pong ball.</li>
+                        <li>Pass it to anyone.  </li>
+                        <li>when the ball hits the ground: the team that last touched it loses a point.</li>
+                        <li>the first team to loose all their points loses. </li>
+                        <li>note: this does not have to be played on a web.</li>
+                
+                        <br>
+                        
+                        <img style="width: 50%" src = "Gallery/20210313_152731.jpg">
+                </div>
+              
+              </div>
+              <div id="direct4" class="modal">
+
+                <div class="modal-content">
+                  <span class="close 4">&times;</span>
+                  <p>
+                    <h1>Kick Ball 2.0</h1>
+                    <h3>Equipment Needed:</h3>
+                        <li>4 Bases</li>
+                        <li>2 Dodgeballs</li>
+                        <li>2 Baseball Gloves</li> 
+                    <br>
+                    <h3>Object:</h3>
+                        <p>Get as many runs as you can in the allotted time.</p>
+                        <br>
+                    <h3>Instructions:</h3>
+                        <li>Divide players into two teams.</li>
+                        <li>Divide one of the teams into 2 lines.</li>
+                        <li>While the other team is throwing balls to the team in the 2 lines, the first person on each line will try to kick the ball.</li>
+                        <li>After kicking the dodgeball you run around the bases with a a baseball glove.</li>
+                        <li>Then the other team tries to hit the runners with the 2 dodgeballs  </li>
+                        <li>If the throwing team hits a person, not on the glove or head, they are out</li>
+                        <li>After there are 3 outs you switch.</li>
+                        <br>
+                        <img style="width: 50%" src = "Gallery/20210320_150436.jpg">
+                </div>
+              
+              </div>
+              <div id="direct5" class="modal">
+
+                <div class="modal-content">
+                  <span class="close 5">&times;</span>
+                    <h1>Make it home!</h1>
+                    <h3>Equipment needed:</h3>
+                    <p>Baseball Bat<br>
+                      Baseballs<br>
+                      2 Baseball Mitts<br>
+                      4 Bases<br>
+                    </p>
+                    <br>
+                    <h3>Object:</h3>
+                    <p>Get 10 points by hitting the ball to home plate.</p>
+                    <br>
+                    <h3>Instructions:</h3> 
+                    <li>Set up the field like a baseball field.</li> 
+                    <li>The batter stands at the pitcher’s mound.</li> 
+                    <li>The pitcher stands at first base.</li> 
+                    <li>The batter has 3 tries to hit the ball when the pitcher throws it.</li>  
+                    <li>A catcher from one team and a catcher from the other team stands by home to try to catch the ball.</li> 
+                    <li>Players from both teams are in the outfield, trying to catch the ball, pass it, and get it to their catcher.</li> 
+                    <li>No one can run with the ball.</li> 
+                    <li>When a catcher touches home with the ball, his or her team gets a point.</li> 
+                    <li>After two points are scored, they switch.</li>
+                    <br>
+                    <img style="width: 50%" src = "Gallery/20210325_172415_HDR.jpg"><img style="width: 50%" src = "Gallery/Web capture_6-4-2021_115417_docs.google.com.jpeg">
+                </div>
+              
+              </div>
+              <div id="direct6" class="modal">
+
+                <div class="modal-content">
+                  <span class="close 6">&times;</span>
+                  <h1>Monster Truck Ball</h1>
+                    <h3>Equipment needed:</h3>
+                    <p>Basketball<br>
+                      Mini Hoop<br>
+                      Soccerball<br>
+                    </p>
+                    <br>
+                    <h3>Object:</h3>
+                    <p>Throw the basketball ball into the basketball hoop 3 times.</p>
+                    <br>
+                    <h3>Instructions:</h3> 
+                    <li>There are two teams.</li> 
+                    <li>People kick the soccer ball around and try to hit people.</li> 
+                    <li>If you get hit by the soccer ball, you are out.</li> 
+                    <li>You can’t get back in.</li>  
+                    <li>You can’t run with the basketball.</li> 
+                    <li>The first team to get the ball in the hoop 3 times wins.</li> 
+                    <br>
+                    <img style="width: 50%" src = "Gallery/20210330_171515.jpg">
+                </div>
+              
+              </div>
+              <div id="direct7" class="modal">
+
+                <div class="modal-content">
+                  <span class="close 7">&times;</span>
+                  <h1>Hahn-Ball</h1>
+                    <h3>Equipment Needed:</h3>
+                        <li>‘Collaboration Circle’ - we used a mini trampoline</li>
+                        <li>Ball</li>
+                        <li>2-4 players</li>
+                        <br>
+                        <h3>Object:</h3>
+                        <p>As a team, bounce the ball off the collaboration circle as many times as you can without any player hitting the ball more than once in a row or allowing the ball to touch the ground.
+                        </p>
+                        <br>
+                    <h3>Instructions:</h3>
+                      <li>With two boys, competition can create problems, so we wanted to create a competitive game with a collaborative spin.</li>
+                        <li>Work as a team to bounce the ball off the collaboration circle to another player, so they can either pass the ball or they can hit the ball off the collaboration circle to another player.</li>
+                        <li>A point is scored each time the ball is passed to another player after bouncing off the ‘Collaboration Circle’. </li>
+                        <li>At the beginning of the game, all players discuss their initial goal score. (How many times they think they can pass the ball off the Collaboration Circle to another player before hitting the ground). The key is to start small (5 or less) and then work your way higher. The team must celebrate together each time they achieve or exceed their predetermined goal.</li>
+                        <li>Each player can only touch the ball once until it touches another player. </li>
+                        <li>If the last person to touch the ball is NOT you, then you can slap, tip or pass the ball to another player or pass it off the Collaboration Circle. </li>
+                        <li>If a player touches the ball twice in a row, the scoring stops and you must begin again from 0.</li>
+                        <li>If the ball touches the ground, the scoring stops and you begin again from 0.</li><br>
+                        <br> 
+                    <img style="width: 50%" src = "Gallery/IMG_7948.jpeg"><img style="width: 50%" src = "Gallery/IMG_7952.HEIC">
+                </div>
+              
+              </div>
+              <div id="direct8" class="modal">
+
+                <div class="modal-content">
+                  <span class="close 8">&times;</span>
+                    <h1>Hockey Ping-pong Baseball</h1>
+                    <h3>Equipment Needed:</h3>
+                        <li>Bases</li>
+                        <li>A Ping-pong ball</li>
+                        <li>Hockey sticks</li>
+                        <br>
+                        <h3>Object:</h3>
+                        <p>Get 10 points by hitting the ball or catching the ball.</p>
+                        <br>
+                    <h3>Instructions:</h3>
+                      <br>
+                        <li>Divide players into two teams.</li>
+                        <li>Give out the hockey sticks to one of the teams.</li>
+                        <li>Give the other team the bases and the ping-pong ball.</li>
+                        <li>The team with the bases spread out on a field.</li>
+                        <li>If they can throw and catch the ping-pong ball 5 times in a row, before the other team blocks it with a hockey stick, you get 1 point.  </li>
+                        <li>If the team with the hockey sticks can block the ball, they get a point.</li>
+                        <li> Once a point is given, you switch positions.</li>
+                        <li>The first team to 10 points win!</li><br>
+                        <br> 
+                    <img style="width: 50%" src = "Gallery/HPPB.jpg">
+                </div>
+              
+              </div>
+              <div id="direct9" class="modal">
+
+                <div class="modal-content">
+                  <span class="close 9">&times;</span>
+                  <h1>Poison Frog</h1>
+                    <h3>Equipment Needed:</h3>
+                        <li>2-4 Monkey Name Tags (1 has a green dot on the back for the Un-poisoner)</li>
+                        <li>2 Frog Name Tags (1 has a red dot on the back for the poison frog)</li>
+                        <br>
+                        <h3>Object:</h3>
+                        <p>Do not get “poisoned” (tagged twice) by the “poison frog.”</p>
+                        <br>
+                    <h3>Instructions:</h3>
+                      <br>
+                        <li>Lay out the name tags and have people randomly choose their role. 1 Un-poisoner (monkey with poison vaccine), 1-3 regular monkeys, 1 Regular frog, 1 Poison frog</li>
+                        <li>The monkeys try to eat all the frogs but not the poison frog.</li>
+                        <li> If the monkey is tagged two times, he is poisoned and must stand still.</li>
+                        <li>The Un-poisoner switches tags with the poisoned monkey who is now free. The original Un-poisoner is now a normal monkey and the and the original normal monkey is now the Un-poisoner.</li>
+                        <li> You keep going till all the monkeys tagged the unpoisoner five times.</li>
+                        <li>note:  Fold the name tags in half. All the name tags should have the letter M or F (monkey or frog) on the outside. If you are a frog and a monkey tags you, flip over your card so it shows the back. If the back has red on it then it is a poison frog. If the poison frog tags you two times and you are not the unpoisoner then you need to stand still until you trade name tags with the un-poison monkey.</li>
+                        <br> 
+                    <img style="width: 50%" src = "Gallery/pf1.jpg"><img style="width: 50%" src = "Gallery/pf2.jpg"><img style="width: 50%" src = "Gallery/pf3.jpg"><img style="width: 50%" src = "Gallery/pf4.jpg"><img style="width: 50%" src = "Gallery/pf5.jpg">
+                </div>
+              
+              </div>
+              <div id="directend" class="modal">
+
+                <div class="modal-content">
+                  <span class="close end">&times;</span>
+                  <p>Follow the steps on this website to make a game. Once you are done, email your directions to ncaroboknights@gmail.com and your game should appear in a few days.</p>
+                </div>
+              
               </div>
         <br><button><a href="quiz.html"><h3><- Back</h3></a></button>&emsp;<button><a href="tree.html"><h3>Next -></h3></a></button>
         <script>
@@ -221,7 +495,154 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
+// 1 modal script
+var modal1 = document.getElementById("direct1");
+var a = document.getElementById("1");
+var span = document.getElementsByClassName("1")[0];
+a.onclick = function() {
+  modal1.style.display = "block";
+}
+span.onclick = function() {
+  modal1.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal1) {
+    modal1.style.display = "none";
+  }
+}
+// 2 modal script
+var modal2 = document.getElementById("direct2");
+var b = document.getElementById("2");
+var span = document.getElementsByClassName("2")[0];
+b.onclick = function() {
+  modal2.style.display = "block";
+}
+span.onclick = function() {
+  modal2.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal2) {
+    modal2.style.display = "none";
+  }
+}
+// 3 modal script
+var modal3 = document.getElementById("direct3");
+var c = document.getElementById("3");
+var span = document.getElementsByClassName("3")[0];
+c.onclick = function() {
+  modal3.style.display = "block";
+}
+span.onclick = function() {
+  modal3.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal3) {
+    modal3.style.display = "none";
+  }
+}
+// 4 modal script
+var modal4 = document.getElementById("direct4");
+var d = document.getElementById("4");
+var span = document.getElementsByClassName("4")[0];
+d.onclick = function() {
+  modal4.style.display = "block";
+}
+span.onclick = function() {
+  modal4.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal4) {
+    modal4.style.display = "none";
+  }
+}
+// 5 modal script
+var modal5 = document.getElementById("direct5");
+var e = document.getElementById("5");
+var span = document.getElementsByClassName("5")[0];
+e.onclick = function() {
+  modal5.style.display = "block";
+}
+span.onclick = function() {
+  modal5.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal5) {
+    modal5.style.display = "none";
+  }
+}
+// 6 modal script
+var modal6 = document.getElementById("direct6");
+var f = document.getElementById("6");
+var span = document.getElementsByClassName("6")[0];
+f.onclick = function() {
+  modal6.style.display = "block";
+}
+span.onclick = function() {
+  modal6.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal6) {
+    modal6.style.display = "none";
+  }
+}
+// 7 modal script
+var modal7 = document.getElementById("direct7");
+var g = document.getElementById("7");
+var span = document.getElementsByClassName("7")[0];
+g.onclick = function() {
+  modal7.style.display = "block";
+}
+span.onclick = function() {
+  modal7.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal7) {
+    modal7.style.display = "none";
+  }
+}
+// 8 modal script
+var modal8 = document.getElementById("direct8");
+var h = document.getElementById("8");
+var span = document.getElementsByClassName("8")[0];
+h.onclick = function() {
+  modal8.style.display = "block";
+}
+span.onclick = function() {
+  modal8.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal8) {
+    modal8.style.display = "none";
+  }
+}
+// 9 modal script
+var modal9 = document.getElementById("direct9");
+var i = document.getElementById("9");
+var span = document.getElementsByClassName("9")[0];
+i.onclick = function() {
+  modal9.style.display = "block";
+}
+span.onclick = function() {
+  modal9.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal9) {
+    modal9.style.display = "none";
+  }
+}
+// end modal script
+var modalend = document.getElementById("directend");
+var end = document.getElementById("end");
+var span = document.getElementsByClassName("end")[0];
+end.onclick = function() {
+  modalend.style.display = "block";
+}
+span.onclick = function() {
+  modalend.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modalend) {
+    modalend.style.display = "none";
+  }
+}
 </script>
-
-</body>
-</html>
