@@ -156,8 +156,15 @@
                 <button class="btn" onclick="filterSelection('other')"> Other</button>
               </div>
               <hr>
+              <!--On #11-->
               <div class="row">
-                
+                <div class="column other running" id="11">
+                  <div class="content">
+                  <img src="Gallery/IMG_20210406_142907879 (1).jpg" alt="cat chase" style="width:100%">
+                    <h4>Cat Chase</h4>
+                    <p>Don't let the cat catch the toy on the string...</p>
+                  </div>
+                </div>
                 <div class="column other" id="3">
                   <div class="content">
                   <img src="Gallery/20210313_152731.jpg" alt="Ping-Pong Spider Web" style="width:100%">
@@ -222,6 +229,14 @@
                       <p>Throw the ball in the hoop without getting hit by a soccerball...</p>
                     </div>
                   </div>
+                  <div class="column other throwing" id="10">
+                    <div class="content">
+                    <img src="Gallery/Cannonball Puppy.jpg" alt="cannonball puppy" style="width:100%">
+                      <h4>Cannonball Puppy</h4>
+                      <p>Get your dog in the tub through a game...</p>
+                    </div>
+                  </div>
+  
                 <div class="column kicking running throwing other" id="end">
                     <div class="content">
                     <img src="Gallery/bas_logo.png" alt="No More!" style="width:68%">
@@ -231,12 +246,41 @@
                   </div>
                 </div>
               </div>
+            </div>
+            <div id="direct11" class="modal">
+
+              <div class="modal-content">
+                <span class="close 11">&times;</span>
+                <p>Directions are coming soon</p>
+              </div>
+            </div>
+              <div id="direct10" class="modal">
+
+                <div class="modal-content">
+                  <span class="close 10">&times;</span>
+                  <p>Directions are coming soon</p>
+                </div>
+              
               </div>
               <div id="direct1" class="modal">
 
                 <div class="modal-content">
                   <span class="close 1">&times;</span>
-                  <p>Directions are coming soon</p>
+                  <p>
+                    <h1>Ping-pong Spider web</h1>
+                    <h3>Equipment Needed:</h3>
+                    <p>4 bowling pins</p>
+                    <p>dogdballs</p>
+                    <br>
+                    <h3>Instructions:</h3>
+                        <p>Divide players into two teams.</p>
+                        <p>Set up two pins on bothe sides of the field you are playing in</p>
+                        <p>Set a middle with a line of dogdeballs</p>
+                        <p>Once you grab a ball you run back to your pins, after this you cannot move if you are holdind a ball - you can only pass it to a team member</p>
+                        <p>to get people out you hit them with your ball, and you get back in if the person who hit you gets out  </p>
+                        <p>to win you have to nock down a pin and run it back to your side without getting hit.</p>
+                        <p>Once one team has all the pins, they win! </p>
+                        
                 </div>
               
               </div>
@@ -494,6 +538,36 @@ for (var i = 0; i < btns.length; i++) {
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
   });
+}
+// 11 modal script
+var modal11 = document.getElementById("direct11");
+var k = document.getElementById("11");
+var span = document.getElementsByClassName("11")[0];
+k.onclick = function() {
+  modal11.style.display = "block";
+}
+span.onclick = function() {
+  modal11.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal11) {
+    modal11.style.display = "none";
+  }
+}
+// 10 modal script
+var modal10 = document.getElementById("direct10");
+var j = document.getElementById("10");
+var span = document.getElementsByClassName("10")[0];
+j.onclick = function() {
+  modal10.style.display = "block";
+}
+span.onclick = function() {
+  modal10.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal10) {
+    modal10.style.display = "none";
+  }
 }
 // 1 modal script
 var modal1 = document.getElementById("direct1");
