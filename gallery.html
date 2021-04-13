@@ -156,9 +156,9 @@
                 <button class="btn" onclick="filterSelection('other')"> Other</button>
               </div>
               <hr>
-              <!--On #11-->
+              <!--On #12-->
               <div class="row">
-                <div class="column other running" id="11">
+                <div class="column other throwing" id="11">
                   <div class="content">
                   <img src="Gallery/IMG_20210406_142907879 (1).jpg" alt="cat chase" style="width:100%">
                     <h4>Cat Chase</h4>
@@ -222,6 +222,13 @@
                       <p>Bat, throw, and/or run the ball to your catcher at home...</p>
                     </div>
                   </div>
+                  <div class="column other running" id="12">
+                    <div class="content">
+                    <img src="https://live.staticflickr.com/7378/9166219795_e103098fe8_b.jpg" alt="Sprinkler volleyball" style="width:100%">
+                      <h4>Sprinkler Volleyball</h4>
+                      <p>Play volleyball with a beachball and sprikler...</p>
+                    </div>
+                  </div>
                   <div class="column running throwing kicking" id="6">
                     <div class="content">
                   <img src="Gallery/20210330_171515.jpg" alt="Monster Truck Ball" style="width:100%">
@@ -251,14 +258,83 @@
 
               <div class="modal-content">
                 <span class="close 11">&times;</span>
-                <p>Directions are coming soon</p>
+                <p>
+                  <h1>Cat Chase</h1>
+                  <h3>Equipment Needed:</h3>
+                      <li>Cat</li>
+                      <li>Cat Toy</li>
+                      <li>String</li>
+                      <br>
+                      <h3>Object:</h3>
+                      <p>Make the other team lose all their 5 points.</p>
+                      <br>
+                  <h3>Instructions:</h3>
+                    <br>
+                      <li>Tie a toy onto a string.</li>
+                      <li?>Run with it.</li>
+                      <li>Get the cat to chase the toy.<li>
+                      <li>If the cat catches the toy, the cat wins.</li>
+                      <li>If the cat doesn't catch the toy, you win.</li>
+                      <li>Play it again!</li>
+              
+                      <br>
+                      
+                      <img style="width: 50%" src = "Gallery/IMG_20210406_142907879 (1).jpg">
+              </div>
+            </div>
+            <div id="direct12" class="modal">
+
+              <div class="modal-content">
+                <span class="close 12">&times;</span>
+                <p>
+                  <h1>Sprinkler Volleyball</h1>
+                  <h3>Equipment Needed:</h3>
+                            <li>Spinkler</li>
+                            <li>Beach ball or Volleyball</li>
+                            <li>Cones or Rope to mark the court</li>
+                            <br>
+                            <h3>Object:</h3>
+                            <p>Get 10 points by getting the ball over the sprinkler and the other team cannot return it.</p>
+                            <br>
+                        <h3>Instructions:</h3>
+                            <li>Divide players into two teams.</li>
+                            <li>The sprinkler should be placed in the center of the two teams.</li>
+                            <li>Determine the boundary of your court. Use cones or string to mark it off.</li>
+                            <li>The object of the game is to get the ball over the sprinkler.</li>
+                            <li>Don't let it touch the ground.  </li>
+                            <li>First team to get 15 points, wins the game!</li>
               </div>
             </div>
               <div id="direct10" class="modal">
 
                 <div class="modal-content">
                   <span class="close 10">&times;</span>
-                  <p>Directions are coming soon</p>
+                  <p>
+                    <h1>Cannonball Puppy</h1>
+                    <h3>Equipment Needed:</h3>
+                        <li>Bathtub</li>
+                        <li>3 tennis balls</li>
+                        <li>Timer</li>
+                        <li>Dog</li>
+                        <br>
+                        <h3>Object:</h3>
+                        <p>Make the other team lose all their 5 points.</p>
+                        <br>
+                    <h3>Instructions:</h3>
+                      <br>
+                        <li>Fill the bathtub with water.</li>
+                        <li>Divide players into two teams.</li>
+                        <li>Warm your dog up with a quick training session.</li>
+                        <li>Start the timer.</li>
+                        <li>Throw the first tennis ball down the hallway and have your furry friend fetch!</li>
+                        <li>Walk into the bathroom and tell your puppy to "bring it here" and then "drop it" in the tub.</li>
+                        <li>Repeat the process with tennis ball #2 and #3.</li>
+                        <li>When all 3 tennis balls are in the tub, have your puppy jump in the tub. We use the command "Get in the Tub."</li>
+                        <li>When your dog and 3 tennis balls are in the tub, press stop on your timer. Congratulations! This is your new world record time.</li>
+                
+                        <br>
+                        
+                        <img style="width: 50%" src = "Gallery/Cannonball Puppy.jpg">
                 </div>
               
               </div>
@@ -267,7 +343,7 @@
                 <div class="modal-content">
                   <span class="close 1">&times;</span>
                   <p>
-                    <h1>Ping-pong Spider web</h1>
+                    <h1>Capture the pins!</h1>
                     <h3>Equipment Needed:</h3>
                     <p>4 bowling pins</p>
                     <p>dogdballs</p>
@@ -280,7 +356,7 @@
                         <p>to get people out you hit them with your ball, and you get back in if the person who hit you gets out  </p>
                         <p>to win you have to nock down a pin and run it back to your side without getting hit.</p>
                         <p>Once one team has all the pins, they win! </p>
-                        
+                        <img style="width: 50%" src="Gallery/20210313_152731.jpg">
                 </div>
               
               </div>
@@ -552,6 +628,21 @@ span.onclick = function() {
 window.onclick = function(event) {
   if (event.target == modal11) {
     modal11.style.display = "none";
+  }
+}
+// 12 modal script
+var modal12 = document.getElementById("direct12");
+var l = document.getElementById("12");
+var span = document.getElementsByClassName("12")[0];
+l.onclick = function() {
+  modal12.style.display = "block";
+}
+span.onclick = function() {
+  modal12.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal12) {
+    modal12.style.display = "none";
   }
 }
 // 10 modal script
